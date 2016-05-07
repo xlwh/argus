@@ -174,8 +174,18 @@
 		
 		
 	}
-
-
+		
+		
+    /*从后台加载数据*/
+		$(document).ready(function() {
+			$.getJSON("host", function(result) {
+				$.each(result.data, function(i, item) {
+					var id = item.id;
+					var idUp = item.isUp;
+					var status = item.status;
+				});
+			});
+		});
 	</script>
 </body>
 </html>
